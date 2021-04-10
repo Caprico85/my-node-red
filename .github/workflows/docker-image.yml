@@ -42,7 +42,7 @@ jobs:
           context: .
           platforms: linux/arm/v7
           push: true
-          tags:
+          tags: |
             caprico85/my-node-red:latest
             ghcr.io/caprico85/my-node-red:latest
 
