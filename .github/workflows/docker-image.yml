@@ -24,6 +24,16 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 
+    - name: Check out the repo
+      uses: actions/checkout@v2
+    - name: Push to GitHub Packages
+      uses: docker/build-push-action@v1
+      with:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+        registry: docker.pkg.github.com
+        repository: my-org/my-repo/my-image
+        tag_with_ref: true
 
     - name: Set up Docker Buildx      
       uses: crazy-max/ghaction-docker-buildx@v1      
