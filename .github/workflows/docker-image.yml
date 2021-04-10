@@ -19,7 +19,7 @@ jobs:
       - name: Secret
         shell: bash
         env:
-          SUPER_SECRET: ${{ secrets.SuperSecret }}
+          SUPER_SECRET: ${{ secrets.DOCKERHUB_USERNAME }}
         run: |
           echo "$SUPER_SECRET"
       - name: Login to DockerHub
