@@ -36,7 +36,7 @@ jobs:
         tag_with_ref: true
 
     - name: Set up Docker Buildx      
-      uses: crazy-max/ghaction-docker-buildx@v1      
+      uses: crazy-max/ghaction-docker-buildx@v3.3.1      
       with:        
         version: latest    
     - name: Prepare      
