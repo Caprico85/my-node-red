@@ -30,7 +30,7 @@ jobs:
           #username: caprico85
           #password: 753fed91-538d-4027-9709-b0b2e18949f8
       - name: Build and push
-        uses: docker/build-push-action@v2
+        uses: docker/build-push-action@v2.4.0
         with:
           context: .
           platforms: linux/arm/v7
