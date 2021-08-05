@@ -3,7 +3,7 @@ FROM nodered/node-red:latest-14
 USER root
 
 # Bluetooth-Gruppe hinzufügen
-RUN groupadd bluetooth
+RUN addgroup bluetooth
 
 # Tools zur Bildbearbeitung installieren
 RUN apk add --no-cache ghostscript imagemagick
