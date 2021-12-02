@@ -1,4 +1,4 @@
-FROM nodered/node-red:latest-14
+FROM nodered/node-red:latest
 
 USER root
 
